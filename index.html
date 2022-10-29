@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArinDjo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section id="app" class="w-full">
+        <header class="header fixed top-0 left-0 lg:hidden w-full bg-white">
+            <div class="header__inner flex justify-between items-center px-4 py-2">
+                <div class="header--logo">
+                    <a href="/">
+                        <img src="assets/images/logo_12kiba.png" alt="logo">
+                    </a>
+                </div>
+                <div class="header--burger cursor-pointer" @click="showBurger = !showBurger">
+                    <img src="assets/images/burger.png" alt="burger" key="showBurger" v-if="!showBurger">
+                    <img src="assets/images/close.png" alt="close" key="hideBurger" v-else>
+                </div>
+            </div>
+        </header>
+        <!-- start content -->
+        <section class="portofolio w-full pt-16 flex justify-center items-center flex-wrap">
+            <div class="masonry w-full lg:px-6">
+                <div class="masonry-item" v-for="i in dummyFoto">
+                    <div class="cursor-pointer overflow-hidden" @click="showPreview = true"><img :src="i" :alt="i" class="masonry-content" alt="img"></div>
+                </div>
+            </div>
+        </section>
+        <transition name="fade">
+            <div class="preview w-full flex justify-center items-center flex-wrap fixed top-0 left-0 h-full" v-if="showPreview">
+                <div class="preview__inner relative w-full h-full flex justify-center items-center">
+                    <div class="preview--overlay absolute left-0 top-0 w-full h-full" @click="showPreview = false"></div>
+                    <img class="preview--img relative" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGN6Udf1N7ueV0C0_VBG0Ys6k5C2ls9I70AA&usqp=CAU" alt="img">
+                </div>
+            </div>
+        </transition>
+        <!-- end content -->
+
+        <div class="sidebar px-12 box-content fixed top-0 left-0 h-full bg-white" :class="{ 'show' : showBurger }">
+            <div class="sidebar__inner py-16 h-full">
+                <div class="relative w-full h-full">
+                    <div class="sidebar--top">
+                        <a href="/" class="hidden lg:block mb-2">
+                            <img src="assets/images/logo_12kiba.png" alt="logo">
+                        </a>
+                        <div class="sidebar__menu mt-8">
+                            <div class="mb-4">
+                                <a href="#" class="no-underline hover:underline font-bold">Illustrations</a>
+                            </div>
+                            <div class="mb-4">
+                                <a href="#" class="no-underline hover:underline font-bold">Editorial</a>
+                            </div>
+                            <div class="mb-4">
+                                <a href="#" class="no-underline hover:underline font-bold">Sketchbook</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-sm sidebar--bottom absolute bottom-0 left-0">
+                        <p class="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <a class="font-bold" href="#">More about Us</a>
+                        <div class="flex items-center mt-6">
+                            <p class="mr-2">Follow:</p>
+                            <a href="#">
+                                <img src="assets/images/instagram-2.png" alt="ic-ig" class="icon-social-media">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/linkedin.png" alt="ic-linked-in" class="icon-social-media">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/email.png" alt="ic-email" class="icon-social-media">
+                            </a>
+                        </div>
+                        <p class="credit mt-6">© 2022. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

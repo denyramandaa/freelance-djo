@@ -2,19 +2,46 @@ new Vue({
     el: '#app',
     data: {
         dummyFoto: [
-            'https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads//2018/01/kompas_tark_5764599_133_1-720x480.jpeg',
-            'https://i.pinimg.com/originals/e4/81/cb/e481cbc93bb6e063fe3029186383c855.jpg',
-            'https://i1.wp.com/suwatu.com/gambar/Awang-awang-Sky-View-Magelang.jpg',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm84BIrkKS9bFKRq8RWd-cbHObZ34mjbbpAQ&usqp=CAU',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGN6Udf1N7ueV0C0_VBG0Ys6k5C2ls9I70AA&usqp=CAU',
-            'https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads//2018/01/kompas_tark_5764599_133_1-720x480.jpeg',
-            'https://i.pinimg.com/originals/e4/81/cb/e481cbc93bb6e063fe3029186383c855.jpg',
-            'https://i1.wp.com/suwatu.com/gambar/Awang-awang-Sky-View-Magelang.jpg',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm84BIrkKS9bFKRq8RWd-cbHObZ34mjbbpAQ&usqp=CAU',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGN6Udf1N7ueV0C0_VBG0Ys6k5C2ls9I70AA&usqp=CAU'
+            {
+                text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                src: 'https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads//2018/01/kompas_tark_5764599_133_1-720x480.jpeg'
+            },
+            {
+                text: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                src: 'https://i.pinimg.com/originals/e4/81/cb/e481cbc93bb6e063fe3029186383c855.jpg'
+            },
+            {
+                text: '',
+                src: 'https://i1.wp.com/suwatu.com/gambar/Awang-awang-Sky-View-Magelang.jpg'
+            },
+            {
+                text: '',
+                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm84BIrkKS9bFKRq8RWd-cbHObZ34mjbbpAQ&usqp=CAU'
+            },
+            {
+                text: '',
+                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm84BIrkKS9bFKRq8RWd-cbHObZ34mjbbpAQ&usqp=CAU'
+            },
+            {
+                text: '',
+                src: 'https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads//2018/01/kompas_tark_5764599_133_1-720x480.jpeg'
+            },
+            {
+                text: '',
+                src: 'https://i1.wp.com/suwatu.com/gambar/Awang-awang-Sky-View-Magelang.jpg'
+            },
+            {
+                text: '',
+                src: 'https://d2huqozv2aqnkj.cloudfront.net/wp-content/uploads//2018/01/kompas_tark_5764599_133_1-720x480.jpeg'
+            },
+            {
+                text: '',
+                src: 'https://i.pinimg.com/originals/e4/81/cb/e481cbc93bb6e063fe3029186383c855.jpg'
+            },
         ],
         showBurger: false,
-        showPreview: false
+        showPreview: false,
+        activeImg: 0
     },
     methods: {
         resizeMasonryItem(item){

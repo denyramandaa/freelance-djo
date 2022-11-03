@@ -28,28 +28,27 @@
             </div>
         </header>
         <!-- start content -->
-        <section class="portofolio w-full pt-16 flex justify-center items-center flex-wrap">
-            <div class="masonry w-full lg:px-6">
-                <div class="masonry-item" v-for="(item, key) in dummyFoto" :key="key">
-                    <div class="cursor-pointer overflow-hidden" @click="showPreview = true, activeImg = key"><img :src="item.src" :alt="item" class="masonry-content" alt="img"></div>
+        <section class="portofolio w-full pt-16 flex flex-wrap lg:flex-nowrap">
+            <div class="contact__info">
+                <div class="contact__info--content mb-8 mr-0 lg:mr-8">
+                    <h2>Hello! I’m Maria Karina Putri.</h2>
+                    <p class="whitespace-pre-wrap">I live and draw on the island of Oʻahu where I’m from. A life-long doodler, I entered the creative world professionally through graphic design. I now focus primarily on illustration with a specific interest in children’s media.  </p>
+                    <p class="whitespace-pre-wrap">My comics have been published in <em>Cubby at Home</em> and <em>Illustoria. </em>In 2021,<em> </em>I received the SCBWI Narrative Art Award for my piece, “City Bear.”</p>
+                    <p class="whitespace-pre-wrap">I love stories full of humor, hugs and ‘tude. Sprinkle a little magic into the mundane and I AM THERE. My characters are often oddballs, loners, and trouble-makers—you know, folks I can relate to. </p>
+                    <p class="whitespace-pre-wrap">So! If I’m not at the drawing board, come find me with my family enjoying a good laugh and a sweet treat. </p><p class="whitespace-pre-wrap" data-rte-preserve-empty="true"></p>
+                    <h3>let’s work together:</h3>
+                    <p class="whitespace-pre-wrap"><strong>Literary Inquiries: </strong><br><strong>Kelly Sonnack</strong> at <em>Andrea Brown Literary Agency</em><br>Email: <a href="mailto:kelly@andreabrownlit.com?cc=hello%40adventurefun.club"><strong>kelly@andreabrownlit.com</strong></a></p>
+                    <p class="whitespace-pre-wrap">All Other Inquiries: <a href="mailto:hello@adventurefun.club">hello@adventurefun.club</a></p>
+                    <h3>Connect:</h3>
+                    <p class="whitespace-pre-wrap">
+                        <a href="#" target="_blank">SCBWI </a> |  IG <a href="#" target="_blank">@adventurefunclub</a>
+                    </p>
                 </div>
+            </div>
+            <div class="contact__photo pr-8 pb-8">
+                <img src="https://pps.whatsapp.net/v/t61.24694-24/264983763_1490570388127027_7675281965643955386_n.jpg?ccb=11-4&oh=01_AdRx4cr8MUkPhBSss0OJrF3NDtELNEGnZBYrCvkajQh5vQ&oe=6370860B" alt="ArinDjo">
             </div>
         </section>
-        <transition name="fade">
-            <div class="preview w-full flex justify-center items-center flex-wrap fixed top-0 left-0 h-full" v-if="showPreview">
-                <div class="preview__inner relative w-full h-full flex justify-center items-center">
-                    <div class="preview--overlay absolute left-0 top-0 w-full h-full" @click="showPreview = false"></div>
-                    <img class="preview--img relative" :src="dummyFoto[activeImg].src" alt="img">
-                    <p class="preview--text" v-if="dummyFoto[activeImg].text">{{ dummyFoto[activeImg].text }}</p>
-                    <div v-if="activeImg > 0" class="preview__navigation preview__navigation--prev" @click="activeImg--">
-                        <img src="assets/images/arr-left.png" alt="prev">
-                    </div>
-                    <div v-if="activeImg < dummyFoto.length-1" class="preview__navigation preview__navigation--next" @click="activeImg++">
-                        <img src="assets/images/arr-right.png" alt="prev">
-                    </div>
-                </div>
-            </div>
-        </transition>
         <!-- end content -->
 
         <div class="sidebar px-12 box-content fixed top-0 left-0 h-full bg-white" :class="{ 'show' : showBurger }">

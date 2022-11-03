@@ -49,7 +49,12 @@ a {
 .sidebar__inner {
     width: 200px;
 }
-
+.sidebar__menu a:hover {
+    color: #B5E1DD;
+}
+.sidebar__menu a.active {
+    color: #45B5AA;
+}
 .icon-social-media {
     width: 36px;
     margin-right: 8px;
@@ -79,7 +84,8 @@ a {
     padding-left: 290px;
 }
 .preview__inner {
-    background-color: rgb(255 255 255 / 85%);
+    /* background-color: rgb(255 255 255 / 85%); */
+    background-color: #fff;
 }
 .preview--img {
     max-height: 90%;
@@ -101,13 +107,13 @@ a {
     right: 32px;
 }
 .preview--text {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     padding: 16px 32px;
     width: 100%;
     max-width: 670px;
     margin: 0 auto;
-    background-color: rgb(255 255 255 / 85%);
+    /* background-color: rgb(255 255 255 / 85%); */
 }
 .contact__info {
     width: 100%;
@@ -119,6 +125,9 @@ a {
 }
 .contact__info--content p{
     margin-bottom: 14px;
+}
+.contact__photo img {
+    max-width: 380px;
 }
 
 /* mobile */

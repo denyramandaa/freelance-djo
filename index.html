@@ -37,10 +37,10 @@
         </section>
         <transition name="fade">
             <div class="preview w-full flex justify-center items-center flex-wrap fixed top-0 left-0 h-full" v-if="showPreview">
-                <div class="preview__inner relative w-full h-full flex justify-center items-center">
+                <div class="preview__inner relative w-full h-full flex flex-col justify-center items-center">
                     <div class="preview--overlay absolute left-0 top-0 w-full h-full" @click="showPreview = false"></div>
                     <img class="preview--img relative" :src="dummyFoto[activeImg].src" alt="img">
-                    <p class="preview--text" v-if="dummyFoto[activeImg].text">{{ dummyFoto[activeImg].text }}</p>
+                    <!-- <p class="preview--text" v-if="dummyFoto[activeImg].text">{{ dummyFoto[activeImg].text }}</p> -->
                     <div v-if="activeImg > 0" class="preview__navigation preview__navigation--prev" @click="activeImg--">
                         <img src="assets/images/arr-left.png" alt="prev">
                     </div>
@@ -72,10 +72,9 @@
                         </div>
                     </div>
                     <div class="text-sm sidebar--bottom absolute bottom-0 left-0">
-                        <p class="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                        <a class="font-bold" href="about-us.html">More about Us</a>
-                        <div class="flex items-center mt-6">
-                            <p class="mr-2">Follow:</p>
+                        <!-- <p class="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p> -->
+                        <a class="font-bold" href="about-us.html">contact</a>
+                        <div class="flex items-center mt-2">
                             <a href="#">
                                 <img src="assets/images/instagram-2.png" alt="ic-ig" class="icon-social-media">
                             </a>
